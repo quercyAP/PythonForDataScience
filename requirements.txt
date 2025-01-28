@@ -6,3 +6,6 @@ flake8
 
 # Runtime dependencies
 tqdm
+numpy
+pillow
+matplotlib
