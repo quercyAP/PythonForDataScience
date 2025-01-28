@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+description = "A sample test package"
+author = "eagle"
+author-email = "eagle@42.fr"
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.7"
+metadata-version = "2.1"
+
+[project.urls]
+Homepage = "https://github.com/eagle/ft_package"

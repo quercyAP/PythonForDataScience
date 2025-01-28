@@ -1,0 +1,8 @@
+# Development dependencies
+build
+setuptools
+wheel
+flake8
+
+# Runtime dependencies
+tqdm
