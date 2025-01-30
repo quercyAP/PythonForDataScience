@@ -14,6 +14,7 @@ class Baratheon(Character):
             is_alive (Optional[bool], optional): The character's status. Defaults to True.
         """
         super().__init__(first_name, is_alive)
+        self.family_name = "Baratheon"
         self.eyes = "brown"
         self.hairs = "dark"
 
@@ -24,7 +25,7 @@ class Baratheon(Character):
         Returns:
             str: The character's name
         """
-        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+        return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
 
     def __repr__(self) -> str:
         """
@@ -33,7 +34,7 @@ class Baratheon(Character):
         Returns:
             str: The character's name
         """
-        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+        return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
     
     def die(self) -> None:
         """
@@ -57,7 +58,10 @@ class Lannister(Character):
             is_alive (Optional[bool], optional): The character's status. Defaults to True.
         """
         super().__init__(first_name, is_alive)
-    
+        self.family_name = "Lannister"
+        self.eyes = "blue"
+        self.hairs = "light"
+
     def __str__(self) -> str:
         """
         Return a string representation of the character.
@@ -65,16 +69,16 @@ class Lannister(Character):
         Returns:
             str: The character's name
         """
-        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+        return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
     
     def __repr__(self) -> str:
-        """
+        """ 
         Return a string representation of the character.
         
         Returns:
             str: The character's name
         """
-        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+        return f"Vector: ({self.family_name}, {self.eyes}, {self.hairs})"
     
     def die(self) -> None:
         """
