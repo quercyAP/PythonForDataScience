@@ -7,7 +7,7 @@ def main():
         img = ft_load("animal.jpeg")
         print(img)
 
-        center_y = 299  
+        center_y = 299
         center_x = 665
 
         zoom_size = 200
@@ -25,7 +25,7 @@ def main():
         matplotlib.pyplot.figure(figsize=(6, 6))
 
         matplotlib.pyplot.subplot(1, 1, 1)
-        matplotlib.pyplot.imshow(zoomed, cmap='gray')
+        matplotlib.pyplot.imshow(zoomed, cmap="gray")
 
         matplotlib.pyplot.show()
 
