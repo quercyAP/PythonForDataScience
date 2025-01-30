@@ -23,7 +23,7 @@ def ft_load(path: str) -> numpy.ndarray:
 
             array = numpy.array(img)
 
-            print(f"The shape of image is: {array.shape}")
+            print(f"The shape of image is: {array.shape}\n{array}")
 
             return array
 
