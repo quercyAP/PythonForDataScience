@@ -1,0 +1,100 @@
+from S1E9 import Character
+from typing import Optional
+
+class Baratheon(Character):
+    """
+    Class representing the Baratheon family.
+    """
+    def __init__(self, first_name: str, is_alive: Optional[bool] = True):
+        """
+        Constructor.
+
+        Args:
+            first_name (str): The character's name
+            is_alive (Optional[bool], optional): The character's status. Defaults to True.
+        """
+        super().__init__(first_name, is_alive)
+        self.eyes = "brown"
+        self.hairs = "dark"
+
+    def __str__(self) -> str:
+        """
+        Return a string representation of the character.
+        
+        Returns:
+            str: The character's name
+        """
+        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+
+    def __repr__(self) -> str:
+        """
+        Return a string representation of the character.
+        
+        Returns:
+            str: The character's name
+        """
+        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+    
+    def die(self) -> None:
+        """
+        Kill the character.
+
+        Returns:
+            None
+        """
+        self.is_alive = False
+
+class Lannister(Character):
+    """
+    Class representing the Lannister family.
+    """
+    def __init__(self, first_name: str, is_alive: Optional[bool] = True):
+        """
+        Constructor.
+
+        Args:
+            first_name (str): The character's name
+            is_alive (Optional[bool], optional): The character's status. Defaults to True.
+        """
+        super().__init__(first_name, is_alive)
+    
+    def __str__(self) -> str:
+        """
+        Return a string representation of the character.
+        
+        Returns:
+            str: The character's name
+        """
+        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+    
+    def __repr__(self) -> str:
+        """
+        Return a string representation of the character.
+        
+        Returns:
+            str: The character's name
+        """
+        return f"{self.__class__.__name__}({self.first_name}, {self.is_alive})"
+    
+    def die(self) -> None:
+        """
+        Kill the character.
+
+        Returns:
+            None
+        """
+        self.is_alive = False
+
+    @classmethod
+    def create_lannister(cls, first_name: str, is_alive: Optional[bool] = True):
+        """
+        Create a new Lannister character.
+
+        Args:
+            first_name (str): The character's name
+            is_alive (Optional[bool], optional): The character's status. Defaults to True.
+        
+        Returns:
+            Lannister: The new character
+        """
+        return cls(first_name, is_alive)
