@@ -14,7 +14,7 @@ def ft_invert(array: numpy.ndarray) -> numpy.ndarray:
     return 255 - array
 
 
-def ft_red(array: numpy.ndarray) -> numpy.ndarray:
+def ft_red(array: numpy.ndarray) -> numpy.ndarray:  
     """
     Keeps only the red channel in the image.
 
@@ -47,7 +47,7 @@ def ft_green(array: numpy.ndarray) -> numpy.ndarray:
 
 
 def ft_blue(array: numpy.ndarray) -> numpy.ndarray:
-    """
+    """ 
     Keeps only the blue channel in the image.
 
     Args:
@@ -62,17 +62,7 @@ def ft_blue(array: numpy.ndarray) -> numpy.ndarray:
     return result
 
 
-def ft_add(a, b):
-    """
-    Implements addition using only bitwise operations.
-
-    Args:
-        a: First number
-        b: Second number
-
-    Returns:
-        Sum of a and b using bitwise operations
-    """
+def bitwise_add(a, b):
     while numpy.any(b != 0):
         carry = a & b
         a = a ^ b
@@ -82,24 +72,16 @@ def ft_add(a, b):
 
 def ft_grey(array: numpy.ndarray) -> numpy.ndarray:
     """
-    Converts the image to grayscale using simple averaging method.
-    Formula: (Red + Green + Blue) / 3
+    Converts the image to grayscale.
 
     Args:
-        array (numpy.ndarray): 3D array representing the RGB image
+        array (numpy.ndarray): 2D array representing the image
 
     Returns:
         numpy.ndarray: Grayscale image
     """
     result = array.copy()
-    grey = (
-        ft_add(
-            ft_add(result[:, :, 0].astype(int), result[:, :, 1].astype(int)),
-            result[:, :, 2].astype(int),
-        )
-        / 3
-    )
-
+    grey = (bitwise_add(result[:, :, 0], bitwise_add(result[:, :, 1], result[:, :, 2])) / 3)
     result[:, :, 0] = grey
     result[:, :, 1] = grey
     result[:, :, 2] = grey
