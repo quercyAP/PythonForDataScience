@@ -9,7 +9,7 @@ def display(img, title):
     matplotlib.pyplot.title(title)
     matplotlib.pyplot.show()
 
-img = ft_load("day01/assets/landscape.jpg")
+img = ft_load("landscape.jpg")
 
 filters = [
     (ft_invert, "Invert"),

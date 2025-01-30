@@ -26,7 +26,7 @@ def transpose(array: numpy.ndarray) -> numpy.ndarray:
 
 def main():
     try:
-        img = ft_load("day01/assets/animal.jpeg")
+        img = ft_load("animal.jpeg")
 
         center_y = 299
         center_x = 665

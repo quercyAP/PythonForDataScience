@@ -4,7 +4,7 @@ import matplotlib.pyplot
 
 def main():
     try:
-        img = ft_load("day01/assets/animal.jpeg")
+        img = ft_load("animal.jpeg")
         print(img)
 
         center_y = 299  
