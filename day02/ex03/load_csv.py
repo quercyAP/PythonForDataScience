@@ -23,5 +23,6 @@ def load(path: str) -> pandas.DataFrame:
         pandas.errors.EmptyDataError,
         pandas.errors.ParserError,
         PermissionError,
-    ):
+    ) as e:
+        print(f'Error : {str(e)}')
         return None
